@@ -1,0 +1,324 @@
+/* src/styles/Results.css */
+
+.resultado-container {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    animation: slideIn 0.4s ease-out;
+  }
+  
+  .resultado-container h3,
+  .resultado-container h4 {
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid de estadísticas */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+  }
+  
+  .stat-box {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .stat-box:hover {
+    transform: translateY(-5px);
+  }
+  
+  .stat-label {
+    display: block;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+  }
+  
+  .stat-value {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Variantes de stat-box */
+  .stat-box.positivo {
+    background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+  }
+  
+  .stat-box.positivo .stat-label,
+  .stat-box.positivo .stat-value {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-box.negativo {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  }
+  
+  .stat-box.negativo .stat-label,
+  .stat-box.negativo .stat-value {
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-box.neutral {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  }
+  
+  /* Barras de progreso */
+  .progress-section {
+    margin-top: 25px;
+  }
+  
+  .progress-item {
+    margin-bottom: 20px;
+  }
+  
+  .progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .percentage {
+    font-size: 1.1rem;
+    color: #667eea;
+  }
+  
+  .progress-bar {
+    width: 100%;
+    height: 28px;
+    background: #e0e0e0;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .progress-fill {
+    height: 100%;
+    transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .progress-fill.positivo {
+    background: linear-gradient(90deg, #56ab2f 0%, #a8e063 100%);
+    box-shadow: 0 2px 8px rgba(86, 171, 47, 0.3);
+  }
+  
+  .progress-fill.negativo {
+    background: linear-gradient(90deg, #eb3349 0%, #f45c43 100%);
+    box-shadow: 0 2px 8px rgba(235, 51, 73, 0.3);
+  }
+  
+  /* Comentario analizado */
+  .analyzed-comment {
+    margin-top: 25px;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+  }
+  
+  .comment-label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .comment-text {
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+    line-height: 1.6;
+  }
+  
+  /* Lista de comentarios (batch) */
+  .comentarios-section {
+    margin-top: 30px;
+  }
+  
+  .comentarios-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .comentario-item {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+  }
+  
+  .comentario-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  .comentario-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .comentario-number {
+    background: #667eea;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .comentario-texto {
+    color: #555;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  .comentario-badge-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+  }
+  
+  .badge {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .badge.positivo {
+    background: #d4edda;
+    color: #155724;
+  }
+  
+  .badge.negativo {
+    background: #f8d7da;
+    color: #721c24;
+  }
+  
+  .badge.neutral {
+    background: #d1ecf1;
+    color: #0c5460;
+  }
+  
+  .badge-percentage {
+    font-weight: bold;
+    color: #333;
+    font-size: 1rem;
+  }
+  
+  /* Botón toggle */
+  .toggle-button {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: 2px solid #667eea;
+    color: #667eea;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .toggle-button:hover {
+    background: #667eea;
+    color: white;
+  }
+  
+  /* Sección de exportar */
+  .export-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 2px dashed #ddd;
+  }
+  
+  .export-button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .export-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(17, 153, 142, 0.4);
+  }
+  
+  /* Animaciones */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .stats-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .comentario-item {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .comentario-badge-group {
+      width: 100%;
+      justify-content: space-between;
+    }
+  
+    .stat-value {
+      font-size: 1.5rem;
+    }
+  }

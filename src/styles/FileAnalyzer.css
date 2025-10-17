@@ -1,0 +1,77 @@
+/* src/styles/FileAnalyzer.css */
+
+.file-analyzer-card {
+    /* Hereda estilos de .card */
+  }
+  
+  .file-upload-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .file-input-hidden {
+    display: none;
+  }
+  
+  .file-label {
+    display: block;
+    padding: 20px;
+    background: white;
+    border: 3px dashed #667eea;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    color: #667eea;
+    font-size: 1.05rem;
+  }
+  
+  .file-label:hover {
+    background: #f8f9fa;
+    border-color: #764ba2;
+    transform: translateY(-2px);
+  }
+  
+  .file-selected {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #333;
+  }
+  
+  .remove-file-btn {
+    background: #ff4444;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+  }
+  
+  .remove-file-btn:hover {
+    background: #cc0000;
+    transform: scale(1.1);
+  }
+  
+  .file-info {
+    background: #f0f4ff;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #667eea;
+    margin-top: 10px;
+  }
+  
+  .file-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #555;
+  }
