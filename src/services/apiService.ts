@@ -1,5 +1,5 @@
 // const API_BASE_URL = 'http://localhost:8000';//dev
-const API_BASE_URL = import.meta.env.URL_API_BACKEND;//prod
+const API_BASE_URL = import.meta.env.VITE_URL_API_BACKEND;//prod
 
 export interface SentimentResult {
   comentario: string;
