@@ -54,8 +54,8 @@ Aplicación web moderna para analizar sentimientos en comentarios usando Intelig
 ### 1. Clonar el repositorio
 
 ```bash
-git clone https://github.com/tu-usuario/sentiment-analysis-frontend.git
-cd sentiment-analysis-frontend
+git clone https://github.com/GAMR11/frontend-filter-comments.git
+cd frontend-filter-comments
 ```
 
 ### 2. Instalar dependencias
