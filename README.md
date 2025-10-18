@@ -1,73 +1,245 @@
-# React + TypeScript + Vite
+# 🎭 Análisis de Sentimientos - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web moderna para analizar sentimientos en comentarios usando Inteligencia Artificial. Interfaz desarrollada con React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+![Banner](https://img.shields.io/badge/React-18.3-blue?logo=react)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)
+![Vite](https://img.shields.io/badge/Vite-5.0-purple?logo=vite)
+![License](https://img.shields.io/badge/License-MIT-green)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📸 Capturas de Pantalla
 
-## React Compiler
+### Interfaz Principal
+![Interfaz Principal](./screenshots/interfaz-principal.webp)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Análisis Individual
+![Análisis Individual](./screenshots/analisis-individual.webp)
 
-## Expanding the ESLint configuration
+### Análisis por Lotes (CSV/Excel)
+![Análisis Batch](./screenshots/analisis-batch.webp)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## ✨ Características
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- 🔍 **Análisis Individual**: Analiza comentarios de forma rápida con Ctrl+Enter
+- 📊 **Análisis por Lotes**: Sube archivos CSV o Excel con múltiples comentarios
+- 📈 **Visualización en Tiempo Real**: Gráficos de porcentajes y métricas detalladas
+- 🎨 **Interfaz Moderna**: Diseño responsive con gradientes y animaciones
+- 💾 **Exportación de Datos**: Descarga resultados en formato JSON
+- 🔄 **Estado de API**: Monitoreo en tiempo real de la conexión con el backend
+- 🌐 **Soporte Multilingüe**: Optimizado para español
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## 🛠️ Tecnologías
+
+- **React 18** - Biblioteca de UI con Hooks
+- **TypeScript** - Tipado estático para JavaScript
+- **Vite** - Build tool ultrarrápido
+- **CSS3** - Estilos modernos con gradientes y animaciones
+- **Fetch API** - Comunicación con el backend
+
+---
+
+## 📋 Requisitos Previos
+
+- Node.js 18+ y npm 9+
+- Backend API corriendo en `http://localhost:8000`
+
+---
+
+## 🚀 Instalación
+
+### 1. Clonar el repositorio
+
+```bash
+git clone https://github.com/tu-usuario/sentiment-analysis-frontend.git
+cd sentiment-analysis-frontend
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 2. Instalar dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
+
+### 3. Configurar variables de entorno (opcional)
+
+Crea un archivo `.env` si necesitas cambiar la URL de la API:
+
+```env
+VITE_API_URL=http://localhost:8000
+```
+
+### 4. Ejecutar en modo desarrollo
+
+```bash
+npm run dev
+```
+
+La aplicación estará disponible en `http://localhost:5173`
+
+---
+
+## 📦 Build para Producción
+
+```bash
+npm run build
+```
+
+Los archivos optimizados se generarán en la carpeta `dist/`
+
+### Preview del build
+
+```bash
+npm run preview
+```
+
+---
+
+## 📁 Estructura del Proyecto
+
+```
+src/
+├── components/          # Componentes de React
+│   ├── CommentAnalyzer.tsx    # Análisis individual
+│   ├── FileAnalyzer.tsx       # Análisis de archivos
+│   ├── ResultCard.tsx         # Resultados individuales
+│   └── BatchResults.tsx       # Resultados batch
+├── services/           # Lógica de comunicación con API
+│   └── apiService.ts          # Servicio centralizado
+├── styles/             # Estilos CSS
+│   ├── App.css
+│   ├── CommentAnalyzer.css
+│   ├── FileAnalyzer.css
+│   └── Results.css
+├── utils/              # Utilidades y constantes
+│   └── constants.ts
+├── App.tsx             # Componente principal
+└── main.tsx            # Punto de entrada
+```
+
+---
+
+## 🎯 Uso
+
+### Analizar un Comentario Individual
+
+1. Escribe o pega tu comentario en el área de texto
+2. Presiona el botón **"Analizar"** o usa `Ctrl + Enter`
+3. Visualiza el resultado con porcentajes y nivel de confianza
+
+### Analizar Múltiples Comentarios
+
+1. Prepara un archivo CSV o Excel con una columna llamada **"comentario"** o **"texto"**
+2. Haz clic en **"Seleccionar archivo"**
+3. Presiona **"Analizar Archivo"**
+4. Visualiza el resumen general y todos los comentarios analizados
+5. Descarga los resultados en JSON
+
+**Ejemplo de CSV:**
+```csv
+comentario
+Este producto es excelente
+No me gustó el servicio
+El precio es justo
+```
+
+---
+
+## 🔌 API Endpoints Consumidos
+
+| Endpoint | Método | Descripción |
+|----------|--------|-------------|
+| `/analizar` | POST | Analiza un comentario individual |
+| `/analizar-csv` | POST | Analiza archivo CSV |
+| `/analizar-excel` | POST | Analiza archivo Excel |
+| `/health` | GET | Verifica estado del backend |
+
+---
+
+## 🎨 Características de Diseño
+
+- **Gradientes Modernos**: Paleta de colores vibrante
+- **Animaciones Suaves**: Transiciones y efectos hover
+- **Responsive Design**: Adaptable a móviles, tablets y desktop
+- **Estados Visuales**: Loading, error y success states
+- **Barras de Progreso**: Visualización intuitiva de porcentajes
+
+---
+
+## 🐛 Solución de Problemas
+
+### Error: "API Desconectada"
+
+- Verifica que el backend esté corriendo en `http://localhost:8000`
+- Revisa la consola del navegador para más detalles
+
+### Error al subir archivos
+
+- Asegúrate de que el archivo sea CSV o Excel (.xlsx, .xls)
+- Verifica que tenga una columna llamada "comentario" o "texto"
+- El tamaño máximo es 10MB
+
+### Errores de CORS
+
+- El backend debe tener configurado CORS para `http://localhost:5173`
+- Revisa la configuración en el archivo `main.py` del backend
+
+---
+
+## 🧪 Scripts Disponibles
+
+```bash
+npm run dev          # Modo desarrollo
+npm run build        # Build de producción
+npm run preview      # Preview del build
+npm run lint         # Linter de código
+```
+
+---
+
+## 🤝 Contribuir
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add: AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+---
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detalles.
+
+---
+
+## 👨‍💻 Autor
+
+**Tu Nombre**
+- GitHub: [@tu-usuario](https://github.com/tu-usuario)
+- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+
+---
+
+## 🙏 Agradecimientos
+
+- [Hugging Face](https://huggingface.co/) por los modelos de IA
+- [React](https://react.dev/) por la increíble biblioteca de UI
+- [Vite](https://vitejs.dev/) por el build tool ultrarrápido
+
+---
+
+## 🔗 Enlaces Relacionados
+
+- [Repositorio Backend](https://github.com/tu-usuario/sentiment-analysis-backend)
+- [Documentación API](http://localhost:8000/docs)
+- [Demo en Vivo](https://tu-demo.com)
+
+---
+
+**Desarrollado con 💜 | 2025**
