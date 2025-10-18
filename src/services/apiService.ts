@@ -1,8 +1,6 @@
-// src/services/apiService.ts
+// const API_BASE_URL = 'http://localhost:8000';//dev
+const API_BASE_URL = import.meta.env.URL_API_BACKEND;//prod
 
-const API_BASE_URL = 'http://localhost:8000';
-
-// Interfaces para tipar las respuestas
 export interface SentimentResult {
   comentario: string;
   etiqueta: string;

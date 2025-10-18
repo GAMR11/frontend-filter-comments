@@ -69,7 +69,7 @@ npm install
 Crea un archivo `.env` si necesitas cambiar la URL de la API:
 
 ```env
-VITE_API_URL=http://localhost:8000
+URL_API_BACKEND=http://localhost:8000
 ```
 
 ### 4. Ejecutar en modo desarrollo
