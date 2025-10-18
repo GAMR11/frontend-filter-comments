@@ -220,9 +220,9 @@ Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detall
 
 ## 👨‍💻 Autor
 
-**Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- LinkedIn: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+**Gustavo Morales**
+- GitHub: [@GAMR11](https://github.com/GAMR11)
+- LinkedIn: [https://www.linkedin.com/in/gustavo-morales-640259221](https://www.linkedin.com/in/gustavo-morales-640259221/)
 
 ---
 
@@ -236,9 +236,9 @@ Este proyecto está bajo la Licencia MIT. Ver archivo `LICENSE` para más detall
 
 ## 🔗 Enlaces Relacionados
 
-- [Repositorio Backend](https://github.com/tu-usuario/sentiment-analysis-backend)
+- [Repositorio Backend](https://github.com/GAMR11/api-filter-comments)
 - [Documentación API](http://localhost:8000/docs)
-- [Demo en Vivo](https://tu-demo.com)
+<!-- - [Demo en Vivo](https://tu-demo.com) -->
 
 ---
 
